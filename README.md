@@ -8,11 +8,13 @@ Please build an appropriate environment for the PWC-Net to compute optical flow.
 
 ## 2 Download pre-trained model
 
-Please download at this [link](). Then put this model in the `models` folder under current path.
+Please download pre-trained ResNet50-Instance-Normalized model at this [link](https://portland-my.sharepoint.com/:u:/g/personal/yzzhao2-c_my_cityu_edu_hk/EXtVpiqYqMNIoQhqJaRrMM8BP8Zy4ZIDhscDhb0FhyAbPg?e=T4s0ha), if you want to train VCGAN. The pre-trained ResNet50-Instance-Normalized model at epoch 150 has the Top-1 accuracy of 56.55% and Top-5 accuracy of 79.66%, on ImageNet validation set. The hyper-parameters follow the settings of original paper except normalization.
+
+Please download at this [link](), if you want to test VCGAN. Then put this model in the `models` folder under current path.
 
 ## 3 Use the code
 
-Change the settings and run:
+Put the pre-trained ResNet50-Instance-Normalized model into `trained_models` folder, then change the settings and run:
 
 ```bash
 cd train
@@ -22,7 +24,8 @@ python train.py or sh first.sh
 After the model is trained, you can run:
 
 ```bash
-python train2.py or sh second.sh
+python train2.py or sh second.sh (on 256p resolution)
+python train2.py or sh third.sh (on 480p resolution)
 ```
 
 For testing, please run (note that you need to change path to models):
