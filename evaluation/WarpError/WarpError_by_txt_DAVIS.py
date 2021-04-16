@@ -90,15 +90,26 @@ def get_jpgs(path):
             ret.append(filespath)
     return ret
 
-def define_imglist(path):
+# read a txt expect EOF
+def text_readlines(filename):
+    # try to read a txt file and return a list.Return [] if there was a mistake.
+    try:
+        file = open(filename, 'r')
+    except IOError:
+        error = []
+        return error
+    content = file.readlines()
+    # This for loop deletes the EOF (like \n)
+    for i in range(len(content)):
+        content[i] = content[i][:len(content[i])-1]
+    file.close()
+    return content
+
+def define_imglist(opt):
     # wholepathlist contains: basepath + class_name + image_name, while the input is basepath
-    wholepathlist = get_files(path)
+    wholepathlist = text_readlines(opt.imagelist_txt)
     # classlist contains all class_names
-    classlist = []
-    for i in range(len(wholepathlist)):
-        classname = wholepathlist[i].split('\\')[-2]
-        if classname not in classlist:
-            classlist.append(classname)
+    classlist = text_readlines(opt.class_txt)
     print('There are %d classes in the testing set:' % len(classlist), classlist)
     # imglist contains all class_names + image_names
     # imglist first dimension: class_names
@@ -106,7 +117,8 @@ def define_imglist(path):
     imglist = [list() for i in range(len(classlist))]
     for i, classname in enumerate(classlist):
         for j, imgname in enumerate(wholepathlist):
-            if imgname.split('\\')[-2] == classname:
+            if imgname.split('/')[-2] == classname:
+                imgname = os.path.join(opt.basepath, 'DAVIS', imgname)
                 imglist[i].append(imgname)
     return imglist
 
@@ -134,12 +146,24 @@ def create_pwcnet(opt):
         param.requires_grad = False
     return flownet
 
+def save_report(content, filename, mode = 'a'):
+    # Try to save a list variable in txt file.
+    file = open(filename, mode)
+    file.write(str(content) + '\n')
+    file.close()
+
 if __name__ == "__main__":
 
     # Define the parameters
     parser = argparse.ArgumentParser()
-    parser.add_argument('--basepath', type = str, default = '', help = 'the path contains all the generated frames')
+    parser.add_argument('--basepath', type = str, \
+        default = '', \
+            help = 'the path contains all the generated frames')
+    parser.add_argument('--imagelist_txt', type = str, default = './DAVIS_test_imagelist_without_first_frame.txt', help = 'the path contains all the relative image names')
+    parser.add_argument('--class_txt', type = str, default = './DAVIS_test_class.txt', help = 'the path contains all the class names')
     parser.add_argument('--pwcnet_path', type = str, default = './pwcNet-default.pytorch', help = 'the path contains pre-trained PWC-Net')
+    parser.add_argument('--report', type = bool, default = False, help = 'whether the results should be saved')
+    parser.add_argument('--report_txt', type = str, default = './report.txt', help = 'the path saving report')
     opt = parser.parse_args()
     print(opt)
 
@@ -150,8 +174,9 @@ if __name__ == "__main__":
     # Get the 2-dimensional list, containing whole path of each image
     loss = 0
     loss_count = 0
-    imglist = define_imglist(opt.basepath)
+    imglist = define_imglist(opt)
 
+    #print('Calculating...')
     # Loop all the paths
     for i in range(len(imglist)):
         # compute the number of images in current class
@@ -180,5 +205,11 @@ if __name__ == "__main__":
 
     # Compute average loss
     avg_loss = loss / loss_count
+    print(opt.basepath)
     print('The average loss: %.8f' % (avg_loss.item()))
+
+    # Report to a new txt file
+    if opt.report:
+        content = '%s \t wrap error: %8f' % (os.path.split(opt.basepath)[-2], avg_loss.item())
+        save_report(content, opt.report_path)
     
