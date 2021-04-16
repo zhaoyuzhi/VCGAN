@@ -29,13 +29,13 @@ The gifs are shown as:
 | 3DVC | FAVC | VCGAN | |
 | Grayscale | Ground Truth | | |
 
-<img src="./img/horsejump-high/CIC.gif" width="238" height="135" /><img src="./img/horsejump-high/CIC+BTC.gif" width="238" height="135" /><img src="./img/horsejump-high/LTBC.gif" width="238" height="135" /><img src="./img/horsejump-high/LTBC+BTC.gif" width="238" height="135" />
+<img src="./img/horsejump-high/CIC.gif" width="208" height="117" /><img src="./img/horsejump-high/CIC+BTC.gif" width="208" height="117" /><img src="./img/horsejump-high/LTBC.gif" width="208" height="117" /><img src="./img/horsejump-high/LTBC+BTC.gif" width="208" height="117" />
 
-<img src="./img/horsejump-high/SCGAN.gif" width="238" height="135" /><img src="./img/horsejump-high/SCGAN+BTC.gif" width="238" height="135" /><img src="./img/horsejump-high/ChromaGAN.gif" width="238" height="135" /><img src="./img/horsejump-high/ChromaGAN+BTC.gif" width="238" height="135" />
+<img src="./img/horsejump-high/SCGAN.gif" width="208" height="117" /><img src="./img/horsejump-high/SCGAN+BTC.gif" width="208" height="117" /><img src="./img/horsejump-high/ChromaGAN.gif" width="208" height="117" /><img src="./img/horsejump-high/ChromaGAN+BTC.gif" width="208" height="117" />
 
-<img src="./img/horsejump-high/3DVC.gif" width="238" height="135" /><img src="./img/horsejump-high/FAVC.gif" width="238" height="135" /><img src="./img/horsejump-high/VCGAN.gif" width="238" height="135" />
+<img src="./img/horsejump-high/3DVC.gif" width="208" height="117" /><img src="./img/horsejump-high/FAVC.gif" width="208" height="117" /><img src="./img/horsejump-high/VCGAN.gif" width="208" height="117" />
 
-<img src="./img/horsejump-high/Grayscale.gif" width="238" height="135" /><img src="./img/horsejump-high/GT.gif" width="238" height="135" />
+<img src="./img/horsejump-high/Grayscale.gif" width="208" height="117" /><img src="./img/horsejump-high/GT.gif" width="208" height="117" />
 
 ### 2.2 Videvo dataset - 'SkateboarderTableJump'
 
@@ -52,13 +52,13 @@ The gifs are shown as:
 | 3DVC | FAVC | VCGAN | |
 | Grayscale | Ground Truth | | |
 
-<img src="./img/SkateboarderTableJump/CIC.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/CIC+BTC.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/LTBC.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/LTBC+BTC.gif" width="238" height="135" />
+<img src="./img/SkateboarderTableJump/CIC.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/CIC+BTC.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/LTBC.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/LTBC+BTC.gif" width="208" height="117" />
 
-<img src="./img/SkateboarderTableJump/SCGAN.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/SCGAN+BTC.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/ChromaGAN.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/ChromaGAN+BTC.gif" width="238" height="135" />
+<img src="./img/SkateboarderTableJump/SCGAN.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/SCGAN+BTC.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/ChromaGAN.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/ChromaGAN+BTC.gif" width="208" height="117" />
 
-<img src="./img/SkateboarderTableJump/3DVC.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/FAVC.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/VCGAN.gif" width="238" height="135" />
+<img src="./img/SkateboarderTableJump/3DVC.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/FAVC.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/VCGAN.gif" width="208" height="117" />
 
-<img src="./img/SkateboarderTableJump/Grayscale.gif" width="238" height="135" /><img src="./img/SkateboarderTableJump/GT.gif" width="238" height="135" />
+<img src="./img/SkateboarderTableJump/Grayscale.gif" width="208" height="117" /><img src="./img/SkateboarderTableJump/GT.gif" width="208" height="117" />
 
 ## 3 Visual comparisons of VCGAN and the other SOTA image colorization methods
 
