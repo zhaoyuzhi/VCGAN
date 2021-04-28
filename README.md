@@ -96,30 +96,40 @@ python test_model_*.py
 
 ## 6 Related Projects
 
-**SCGAN (IEEE TCSVT 2020): [Project](https://github.com/zhaoyuzhi/Semantic-Colorization-GAN)
+**SCGAN: Saliency Map-guided Colorization with Generative Adversarial Network (IEEE TCSVT 2020): [Project](https://github.com/zhaoyuzhi/Semantic-Colorization-GAN)
 [Paper](https://ieeexplore.ieee.org/document/9257445/keywords#keywords)
 [Github](https://github.com/zhaoyuzhi/Semantic-Colorization-GAN)**
 
-**ChromaGAN (WACV 2020): [Project](https://junyanz.github.io/CycleGAN/)
+**ChromaGAN: Adversarial Picture Colorization with Semantic Class Distribution (WACV 2020):
 [Paper](https://openaccess.thecvf.com/content_WACV_2020/html/Vitoria_ChromaGAN_Adversarial_Picture_Colorization_with_Semantic_Class_Distribution_WACV_2020_paper.html)
-[Github](https://junyanz.github.io/CycleGAN/)**
+[Github](https://github.com/pvitoria/ChromaGAN)**
 
-**Learning Representations for Automatic Colorization (ECCV 2016): [Project](http://people.cs.uchicago.edu/~larsson/colorization/)
+**FAVC: Fully Automatic Video Colorization With Self-Regularization and Diversity (CVPR 2019): [Project](https://leichenyang.weebly.com/project-color.html/)
+[Paper](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lei_Fully_Automatic_Video_Colorization_With_Self-Regularization_and_Diversity_CVPR_2019_paper.pdf)
+[Github](https://github.com/ChenyangLEI/automatic-video-colorization)**
+
+**3DVC: Automatic Video Colorization using 3D Conditional Generative Adversarial Networks (ISVC 2019): [Paper](https://arxiv.org/abs/1905.03023?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529)**
+
+**BTC: Learning Blind Video Temporal Consistency (ECCV 2018): [Project](http://vllab.ucmerced.edu/wlai24/video_consistency/)
+[Paper](https://openaccess.thecvf.com/content_ECCV_2018/papers/Wei-Sheng_Lai_Real-Time_Blind_Video_ECCV_2018_paper.pdf)
+[Github](https://github.com/phoenix104104/fast_blind_video_consistency)**
+
+**LRAC: Learning Representations for Automatic Colorization (ECCV 2016): [Project](http://people.cs.uchicago.edu/~larsson/colorization/)
 [Paper](https://arxiv.org/abs/1603.06668)
 [Github](https://github.com/gustavla/autocolorize)**
 
-**Colorful Image Colorization (ECCV 2016): [Project](http://richzhang.github.io/colorization/)
+**CIC: Colorful Image Colorization (ECCV 2016): [Project](http://richzhang.github.io/colorization/)
 [Paper](https://arxiv.org/abs/1603.08511)
 [Github](https://github.com/richzhang/colorization)**
 
-**Let there be Color! (ACM TOG 2016): [Project](http://iizuka.cs.tsukuba.ac.jp/projects/colorization/en/)
+**LTBC: Let there be Color!: Joint End-to-end Learning of Global and Local Image Priors for Automatic Image Colorization with Simultaneous Classification (ACM TOG 2016): [Project](http://iizuka.cs.tsukuba.ac.jp/projects/colorization/en/)
 [Paper](http://iizuka.cs.tsukuba.ac.jp/projects/colorization/data/colorization_sig2016.pdf)
 [Github](https://github.com/satoshiiizuka/siggraph2016_colorization)**
 
-**Pix2Pix (CVPR 2017): [Project](https://phillipi.github.io/pix2pix/)
+**Pix2Pix: Image-to-Image Translation with Conditional Adversarial Nets (CVPR 2017): [Project](https://phillipi.github.io/pix2pix/)
 [Paper](https://arxiv.org/pdf/1611.07004.pdf)
 [Github](https://github.com/phillipi/pix2pix)**
 
-**CycleGAN (ICCV 2017): [Project](https://junyanz.github.io/CycleGAN/)
+**CycleGAN: Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks (ICCV 2017): [Project](https://junyanz.github.io/CycleGAN/)
 [Paper](https://arxiv.org/pdf/1703.10593.pdf)
 [Github](https://github.com/junyanz/CycleGAN)**
