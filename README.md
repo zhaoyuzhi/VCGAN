@@ -2,6 +2,8 @@
 
 VCGAN is a hybrid colorization model that works for both image and video colorization tasks.
 
+arxiv: https://arxiv.org/pdf/2104.12357.pdf
+
 ## 1 Pre-requisite
 
 Note that this project is implemented using Python 3.6, CUDA 8.0, and PyTorch 1.0.0 (minimum requirement).
