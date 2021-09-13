@@ -401,11 +401,11 @@ class Self_Attn_FM(nn.Module):
         """
         batchsize, C, height, width = x.size()
         # proj_query: reshape to B x N x c, N = H x W
-        proj_query  = self.query_conv(x).view(batchsize, -1, height * width).permute(0, 2, 1)
+        proj_query = self.query_conv(x).view(batchsize, -1, height * width).permute(0, 2, 1)
         # proj_query: reshape to B x c x N, N = H x W
-        proj_key =  self.key_conv(x).view(batchsize, -1, height * width)
+        proj_key = self.key_conv(x).view(batchsize, -1, height * width)
         # transpose check, energy: B x N x N, N = H x W
-        energy =  torch.bmm(proj_query, proj_key)
+        energy = torch.bmm(proj_query, proj_key)
         # attention: B x N x N, N = H x W
         attention = self.softmax(energy)
         # proj_value is normal convolution, B x C x N
@@ -440,11 +440,11 @@ class Self_Attn_C(nn.Module):
         """
         batchsize, C, height, width = x.size()
         # proj_query: reshape to B x N x c, N = H x W
-        proj_query  = self.query_conv(x).view(batchsize, -1, height * width).permute(0, 2, 1)
+        proj_query = self.query_conv(x).view(batchsize, -1, height * width).permute(0, 2, 1)
         # proj_query: reshape to B x c x N, N = H x W
-        proj_key =  self.key_conv(x).view(batchsize, -1, height * width)
+        proj_key = self.key_conv(x).view(batchsize, -1, height * width)
         # transpose check, energy: B x c x c
-        energy =  torch.bmm(proj_key, proj_query)
+        energy = torch.bmm(proj_key, proj_query)
         # attention: B x c x c
         attention = self.softmax(energy)
         # proj_value is a convolution, B x c x N
