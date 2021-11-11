@@ -204,7 +204,7 @@ def trainer_noGAN(opt):
             if opt.iter_frames > 2:
                 # Print log
                 print("[Epoch %d/%d] [Batch %d/%d] [L1 Loss: %.4f] [Percep Loss: %.4f] [Flow loss: %.8f] [Flow Loss Short: %.8f] [Flow Loss Long: %.8f] Time_left: %s" %
-                    ((epoch + opt.lr_overhead * 50 + 1), opt.epochs + opt.lr_overhead * 50 , iteration, len(dataloader), loss_L1.item(), loss_percep.item(), loss_flow.item(), loss_flow_short.item(), loss_flow_long.item(), time_left))
+                    ((epoch + opt.epoch_overhead + 1), opt.epochs, iteration, len(dataloader), loss_L1.item(), loss_percep.item(), loss_flow.item(), loss_flow_short.item(), loss_flow_long.item(), time_left))
             else:
                 # Print log
                 print(
