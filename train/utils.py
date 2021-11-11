@@ -11,24 +11,22 @@ from torch.utils.data.sampler import Sampler
 from torch.utils.data import DataLoader
 
 def create_generator(opt):
-    if opt.pre_train:
+    if opt.load_name:
+        # Initialize the networks
+        colorizationnet = network.SecondStageNet(opt)
+        pretrained_dict = torch.load(opt.load_name)
+        load_dict(colorizationnet, pretrained_dict)
+        print('Generator is loaded!')
+    else:
         # Initialize the networks
         colorizationnet = network.FirstStageNet(opt)
         print('Generator is created!')
         # Init the networks
         network.weights_init(colorizationnet, init_type = opt.init_type, init_gain = opt.init_gain)
         pretrained_dict = torch.load(opt.feature_extractor_path)
-        load_dict(colorizationnet.GlobalFE, pretrained_dict)
-        #load_dict(colorizationnet.PlaceholderFE, pretrained_dict)
+        load_dict(colorizationnet.fenet, pretrained_dict)
+        load_dict(colorizationnet.fenet2, pretrained_dict)
         print('Generator is loaded with %s!' % (opt.feature_extractor_path))
-    else:
-        # Initialize the networks
-        colorizationnet = network.SecondStageNet(opt)
-        pretrained_dict = torch.load(opt.load_name)
-        #pretrained_dict_res = torch.load(opt.load_name_res)
-        load_dict(colorizationnet, pretrained_dict)
-        #load_dict(colorizationnet.fenet2, pretrained_dict_res)
-        print('Generator is loaded!')
     return colorizationnet
 
 def create_discriminator(opt):
