@@ -8,7 +8,7 @@ Please build an appropriate environment for the PWC-Net to compute optical flow.
 
 ## 2 Download pre-trained model
 
-Please download at this [link](). Then put this model under current path.
+Please download at this [link](https://portland-my.sharepoint.com/:u:/g/personal/yzzhao2-c_my_cityu_edu_hk/EU0q2_uLjSdNlE0wsWBI8-wBMGOv94lLAASKAbExbCR5cA?e=ZiywJb). Then put this model under current path.
 
 ## 3 Use the code
 
