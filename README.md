@@ -2,7 +2,7 @@
 
 VCGAN is a hybrid colorization model that works for both image and video colorization tasks.
 
-arxiv: https://arxiv.org/pdf/2104.12357.pdf
+link: https://ieeexplore.ieee.org/document/9721653
 
 ## 1 Pre-requisite
 
@@ -64,36 +64,55 @@ The gifs are shown as:
 
 ## 3 Visual comparisons of VCGAN and the other SOTA image colorization methods
 
-We visualize the Figure 11 in the main paper for better view.
+We visualize the Figure 13 in the main paper for better view.
 
 <img src="./img/image.png" />
 
 ## 4 Download pre-trained model
 
-Please download pre-trained ResNet50-Instance-Normalized model at this [link](https://portland-my.sharepoint.com/:u:/g/personal/yzzhao2-c_my_cityu_edu_hk/EXtVpiqYqMNIoQhqJaRrMM8BP8Zy4ZIDhscDhb0FhyAbPg?e=T4s0ha), if you want to train VCGAN. The hyper-parameters follow the settings of original paper except normalization.
+Please download pre-trained ResNet50-Instance-Normalized model at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/Eo20h4FRMFFFnrhXphkk14ABxeVDbSOsSzjwrTzZP1uWLw?e=HO1IkM) and other pre-trained models at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/ElK6UAagtNdBrJXdiqgxwAQBvRtWDE3Iz004OevS1HcTvw?e=dtLlh9) if you want to train VCGAN. The hyper-parameters follow the settings of original paper except normalization.
 
-Please download at this [link]() (will available after published), if you want to test VCGAN. Then put this model in the `models` folder under current path.
+Please download at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/EjDSgrWFq_tKitsJipgcgFUBkzjcRyROcpuWNZSCJBx6OA?e=Y46pS1) if you want to test VCGAN. It contains a folder named `models`; then you can put it under `train` folder. Note that there are three models provided. The `model1_*.pth` is by default.
+
+Note that they are re-trained on a single GPU that might lead to slightly different results compared with the original one.
 
 ## 5 Use the code
+
+Enter the `train` folder:
+
+```bash
+cd train
+```
+
+### 5.1 Training code
 
 Put the pre-trained ResNet50-Instance-Normalized model into `trained_models` folder, then change the settings and train VCGAN in first stage:
 
 ```bash
-cd train
-python train.py or sh first.sh
+python train.py or sh first.sh # on 256x256 image resolution
 ```
 
 After the model is trained, you can run following codes for second stage:
 
 ```bash
-python train2.py or sh second.sh (on 256p resolution)
-python train2.py or sh third.sh (on 480p resolution)
+python train2.py or sh second.sh # on 256p video resolution
+python train2.py or sh third.sh # on 480p video resolution
 ```
+
+### 5.2 Testing code
 
 For testing, please run (note that you need to change path to models):
 
 ```bash
-python test_model_*.py
+python test_model_second_stage_by_txt.py # for DAVIS dataset
+python test_model_second_stage_by_txt2.py # for videvo dataset
+python test_model_second_stage_by_folder.py # for a single folder
+```
+
+The network interpolation can also be used when applying different models:
+
+```bash
+python network_interp.py
 ```
 
 ## 6 Related Projects

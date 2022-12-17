@@ -40,6 +40,7 @@ def check_path(path):
 
 def define_imglist(opt):
     imglist = utils.get_jpgs(opt.videopath)
+    imglist.sort()
     return imglist
 
 if __name__ == "__main__":
@@ -48,9 +49,13 @@ if __name__ == "__main__":
     # ----------------------------------------
     parser = argparse.ArgumentParser()
     # testing parameters
-    parser.add_argument('--videopath', type = str, default = '', help = 'testing video folder path')
-    parser.add_argument('--savepath', type = str, default = '', help = 'saving folder path')
-    parser.add_argument('--load_name', type = str, default = '', help = 'load the pre-trained model with certain epoch')
+    parser.add_argument('--videopath', type = str, \
+            default = '../real_video_clips/1', \
+                help = 'testing video folder path')
+    parser.add_argument('--savepath', type = str, default = './1', help = 'saving folder path')
+    parser.add_argument('--load_name', type = str, \
+        default = './models/model1_Second_Stage_epoch500_bs1_448p.pth', \
+            help = 'load the pre-trained model with certain epoch')
     parser.add_argument('--crop_size_h', type = int, default = 448, help = 'single patch size') # 448, 256
     parser.add_argument('--crop_size_w', type = int, default = 832, help = 'single patch size') # 832, 448
     parser.add_argument('--comparison', type = bool, default = True, help = 'compare with original RGB image or not')
@@ -124,5 +129,7 @@ if __name__ == "__main__":
         out = out[:, :, ::-1]
         out = cv2.resize(out, (ori_W, ori_H))
         cv2.imwrite(savepath, out)
+        print(savepath)
         # save as last output
         last_img = img
+    
