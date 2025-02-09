@@ -70,7 +70,7 @@ We visualize the Figure 13 in the main paper for better view.
 
 ## 4 Download pre-trained model
 
-Please download pre-trained ResNet50-Instance-Normalized model at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/Eo20h4FRMFFFnrhXphkk14ABxeVDbSOsSzjwrTzZP1uWLw?e=HO1IkM) and other pre-trained models at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/ElK6UAagtNdBrJXdiqgxwAQBvRtWDE3Iz004OevS1HcTvw?e=dtLlh9) if you want to train VCGAN. The hyper-parameters follow the settings of original paper except normalization.
+Please download pre-trained ResNet50-Instance-Normalized model and other pre-trained models at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/ElK6UAagtNdBrJXdiqgxwAQBvRtWDE3Iz004OevS1HcTvw?e=dtLlh9) if you want to train VCGAN. It contains a folder named `trained_models`; then you can put it under `train` folder. The hyper-parameters follow the settings of original paper except normalization.
 
 Please download at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/EjDSgrWFq_tKitsJipgcgFUBkzjcRyROcpuWNZSCJBx6OA?e=Y46pS1) if you want to test VCGAN. It contains a folder named `models`; then you can put it under `train` folder. Note that there are three models provided. The `model1_*.pth` is by default.
 
