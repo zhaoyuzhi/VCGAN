@@ -70,9 +70,21 @@ We visualize the Figure 13 in the main paper for better view.
 
 ## 4 Download pre-trained model
 
-Please download pre-trained ResNet50-Instance-Normalized model and other pre-trained models at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/ElK6UAagtNdBrJXdiqgxwAQBvRtWDE3Iz004OevS1HcTvw?e=dtLlh9) if you want to train VCGAN. It contains a folder named `trained_models`; then you can put it under `train` folder. The hyper-parameters follow the settings of original paper except normalization.
+### 4.1 Training
 
-Please download at this [link](https://portland-my.sharepoint.com/:f:/g/personal/yzzhao2-c_my_cityu_edu_hk/EjDSgrWFq_tKitsJipgcgFUBkzjcRyROcpuWNZSCJBx6OA?e=Y46pS1) if you want to test VCGAN. It contains a folder named `models`; then you can put it under `train` folder. Note that there are three models provided. The `model1_*.pth` is by default.
+Please download pre-trained ResNet50-Instance-Normalized model and other pre-trained models at this:
+
+link: https://pan.baidu.com/s/1UH_MyLwCKPXyQag3k57RZg?pwd=d2fn code: d2fn
+
+It contains a folder named `trained_models`; then you can put it under `train` folder. The hyper-parameters follow the settings of original paper except normalization.
+
+### 4.1 Testing
+
+Please download pre-trained VCGAN models at this:
+
+link: https://pan.baidu.com/s/1jp2aUUYFT4A81ArerIsjyQ?pwd=j3gy code: j3gy
+
+It contains a folder named `models`; then you can put it under `train` folder. Note that there are three models provided. The `model1_Second_Stage_epoch500_bs1_448p.pth` is by default.
 
 Note that they are re-trained on a single GPU that might lead to slightly different results compared with the original one.
 
